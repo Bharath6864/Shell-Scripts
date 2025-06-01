@@ -5,7 +5,7 @@ LOG_PATH="/home/cia/project/share/log/project.log"
 #check for the log file existence
 
 if [ -f "$LOG_PATH" ]; then
-    echo "log file esists"
+    echo "log file exists"
 else
     echo "log file does not exist"
 fi
