@@ -7,7 +7,7 @@ THRESHOLD=80
 # tail -n +2: This option skips the first line of the output, which is usually the header line.
 # while read line -r line: This reads each line of the output and processes it in a loop.
 
-df -h --output=source,pcent,target -x tmpfs -x devtmpfs | tail -n +2 | while read line -r line; do
+df -h --output=source,pcent,target -x tmpfs -x devtmpfs | tail -n +2 | while read -r line; do
 
 # Extract the usage percentage and mount point from each line 
 
