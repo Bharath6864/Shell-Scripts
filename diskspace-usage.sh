@@ -14,7 +14,7 @@ df -h --output=source,pcent,target -x tmpfs -x devtmpfs | tail -n +2 | while rea
 USAGE=$(echo "$line" | awk '{print $2}' | tr -d '%' )
 
 MOUNT_POINT=$(echo "$line" | awk '{print $3}')
- if [ $"USAGE" -ge "$THRESHOLD"] ; then
+ if [ "${USAGE}" -ge "${THRESHOLD}"] ; then
     echo "Warning: Disk usage on $MOUNT_POINT is at ${USAGE}%"
     echo "Consider cleaning up space on $MOUNT_POINT"
  else
